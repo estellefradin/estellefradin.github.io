@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estelle fradin's website</title>
+    <link rel="icon" type="image/png" href="img/logo.svg">
+    <meta name="description" content="Portfolio d'Estelle Fradin, étudiante en design graphique.">
+    <link rel="stylesheet" href="style.css">
+
+    
+
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-img">
+                <a href="home.html"><img src="images-sources/logo.webp"></a>
+            </div>
+            <nav class="nav">
+                <a href="#" class="current">home</a>
+                <a href="about.html">about</a>
+                <a href="https://www.instagram.com/stll.design">instagram</a>
+            </nav>
+        </div>
+    </header>
+
+
+    
+    <h5>A.A.O in a nutshell</h5>
+    <h5>2024</h5>
+    <div class="p-1">Comment créer, uniquement à l’aide de ressources textuelles, des objets graphiques et éditoriaux? 
+        C’était là mon défi sur ce projet. Réussir à mettre en lumière le travail sublime et poétique de l’autrice islandaise Audur Ava Ólafsdóttir à travers un coffret éditorial tout en préservant ses intentions et sans dénaturer son discours. 
+        En croisant mes références, et en mettant en parallèle quatre de ses romans avec des photographes contemporains (ou non), est né "Audur Ava Ólafsdóttir in a nutshell", un coffret épuré et réfléchi qui aspire à donner une matérialité à cet univers si particulier. 
+    </div class=p-1> 
+
+
+
+
+
+
+    <a class="page" href="AAO"> 
+        <img src="images-sources/coffret-2.webp" alt="coffret image 1" data-large="images-sources/coffret-2.webp">
+        <img src="images-sources/coffret-3.webp" alt="coffret image 2" data-large="images-sources/coffret-3.webp">
+        <img src="images-sources/coffret-4.webp" alt="coffret image 3" data-large="images-sources/coffret-4.webp">
+        <img src="images-sources/coffret-5.webp" alt="coffret image 4" data-large="images-sources/coffret-5.webp">
+        <img src="images-sources/coffret-6.webp" alt="coffret image 5" data-large="images-sources/coffret-6.webp">
+        <img src="images-sources/coffret-7.webp" alt="coffret image 6" data-large="images-sources/coffret-7.webp">
+        
+    </a>
+
+
+
+    <script>
+        // Sélectionne toutes les images à l'intérieur du conteneur .gallery
+        const images = document.querySelectorAll('.page img');
+
+        images.forEach(img => {
+            // Ajoute un événement de clic à chaque image
+            img.addEventListener('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();  // Empêche tout autre événement non voulu
+                const largeImage = img.getAttribute('data-large');  // Récupère le chemin de l'image en grand
+                window.open(largeImage, '_blank');  // Ouvre l'image en grand dans un nouvel onglet
+            });
+        });
+    </script>
+
+
+
+
+    
+</body>
+    

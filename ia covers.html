@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estelle fradin's website</title>
+    <link rel="icon" type="image/png" href="img/logo.svg">
+    <meta name="description" content="Portfolio d'Estelle Fradin, étudiante en design graphique.">
+    <link rel="stylesheet" href="style.css">
+
+    
+
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-img">
+                <a href="home.html"><img src="images-sources/logo.webp"></a>
+            </div>
+            <nav class="nav">
+                <a href="#" class="current">home</a>
+                <a href="about.html">about</a>
+                <a href="https://www.instagram.com/stll.design">instagram</a>
+            </nav>
+        </div>
+    </header>
+
+
+    
+    <h5>Intllignc Artficill</h5>
+    <h5>2024</h5>
+    <div class="p-1">Ce projet est une piste d’expérimentation sur les possibilités de mariage entre des images créées artificiellement et des images créées par l’humain. A partir de l’avant-propos de La disparition de Georges Perec, j’ai généré plusieurs images en fonction de mes partis pris, et les ai modifiées ou alors laissées telles quelles. Le projet final se présente sous la forme de jaquettes, celles du livre original.</div class=p-1> 
+
+
+
+
+
+
+    <a class="page-large" href="ia covers"> 
+        <img src="images-sources/ia-cover-2.webp" alt="ia cover 1" data-large="images-sources/ia-cover-2.webp">
+        <img src="images-sources/ia-cover-3.webp" alt="ia cover 2" data-large="images-sources/ia-cover-3.webp">
+
+        
+    </a>
+
+
+
+    <script>
+        // Sélectionne toutes les images à l'intérieur du conteneur .gallery
+        const images = document.querySelectorAll('.page-large img');
+
+        images.forEach(img => {
+            // Ajoute un événement de clic à chaque image
+            img.addEventListener('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();  // Empêche tout autre événement non voulu
+                const largeImage = img.getAttribute('data-large');  // Récupère le chemin de l'image en grand
+                window.open(largeImage, '_blank');  // Ouvre l'image en grand dans un nouvel onglet
+            });
+        });
+    </script>
+
+
+
+
+    
+</body>
+    

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estelle fradin's website</title>
+    <link rel="icon" type="image/webp" href="images-sources/logo.webp">
+    <meta name="description" content="Portfolio d'Estelle Fradin, étudiante en design graphique.">
+    <link rel="stylesheet" href="style.css">
+
+    
+
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-img">
+                <a href="home.html"><img src="images-sources/logo.webp"></a>
+            </div>
+            <nav class="nav">
+                <a href="home.html" class="current">home</a>
+                <a href="about.html">about</a>
+                <a href="https://www.instagram.com/stll.design">instagram</a>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+<h3>Estelle Fradin est étudiante en design graphique à l'esad d'Amiens depuis 2023</h3>
+
+
+
+<h4>works &darr;</h4>
+
+
+
+
+
+    <div class="projets">
+
+        
+
+        <a class="projet" href="jaquettes.html"> 
+            <div>
+                <h2>Jaquettes, 2024</h2>
+            </div>
+            <img src="images-sources/jaquette-roman-carre.webp" alt="Revisite de jaquettes">
+        </a>
+
+        <a class="projet" href="reportage.html">
+            <div>
+                <h2>Le cul entre deux chaises, 2023</h2>
+            </div>
+            <img src="images-sources/reportage-1.webp" alt="Couverture édition reportage"> 
+        </a>
+
+        
+        <a class="projet" href="revue.html">  
+            <div>
+                <h2>BOLD&ALL, 2024</h2> 
+            </div> 
+            <img src="images-sources/revue-mockup-carre.webp" alt="Couverture de magazine">
+        </a>
+
+        <a class="projet" href="affiche-waide.html">
+            <div>
+                <h2>Affiche Waide, 2024</h2>
+            </div>
+            <img src="images-sources/affiche-waide-mockup-5-carre.webp" alt="Affiche Waide">
+        </a>
+
+        <a class="projet" href="cimetiere.html">
+            <div>
+                <h2>Cimetière, 2024</h2>
+            </div>
+            <img src="images-sources/indatable-1.webp" alt="Edition photo ciemtière">
+        </a>
+
+        <a class="projet" href="salon-bleu.html">
+            <div>
+                <h2>Salon bleu, 2024</h2>
+            </div>
+            <img src="images-sources/mockup-salon-bleu-carre.webp" alt="Stop motion">
+        </a>
+
+
+        <a class="projet" href="coffret-artiste.html">
+            <div>
+                <h2>A.A.O in a nutshell, 2024</h2>
+            </div>
+            <img src="images-sources/coffret-1.webp" alt="Coffret artiste">
+        </a>
+
+
+
+
+        <a class="projet" href="ia covers.html">
+            <div>
+                <h2>Intllignc Artficill, 2024</h2>
+            </div>
+            <img src="images-sources/ia-cover.webp" alt="couvertures ia">
+        </a>
+
+
+    </div>
+
+
+    <h4> &copy; 2024 Estelle Fradin </h4>
+
+
+
+
+
+
+    <style>
+        #toTopBtn {
+            display: none; 
+            position: fixed; 
+            bottom: 20px;
+            right: 30px;
+            z-index: 99; 
+            font-size: 24px; 
+            background: none; 
+            color: rgb(0, 0, 0); 
+            padding: 15px;
+            border: none;
+            cursor: pointer; 
+        }
+
+        #toTopBtn:hover {
+            color: #ff0000; 
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <button id="toTopBtn" onclick="scrollToTop()">&#8593;</button>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            const toTopBtn = document.getElementById("toTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                toTopBtn.style.display = "block"; 
+            } else {
+                toTopBtn.style.display = "none"; 
+            }
+        }
+
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' 
+            });
+        }
+    </script>
+
+
+    
+    </footer>
+
+
+
+
+    <!-- <footer>
+        <div class="footer-content">
+            <p>Suivez-moi sur :
+                <a href="https://www.instagram.com/stll.design" target="_blank">Instagram</a>
+            </p>
+        </div>
+    </footer>     -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estelle fradin's website</title>
+    <link rel="icon" type="image/png" href="img/logo.svg">
+    <meta name="description" content="Portfolio d'Estelle Fradin, étudiante en design graphique.">
+    <link rel="stylesheet" href="style.css">
+
+    
+
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-img">
+                <a href="home.html"><img src="images-sources/logo.webp"></a>
+            </div>
+            <nav class="nav">
+                <a href="#" class="current">home</a>
+                <a href="about.html">about</a>
+                <a href="https://www.instagram.com/stll.design">instagram</a>
+            </nav>
+        </div>
+    </header>
+
+
+    
+    <h5>Le cul entre deux chaises</h5>
+    <h5>2023</h5>
+    <div class="p-1">“Le départ pour une ville
+        - Où je réapprends à connaître 
+        - La véhémence et le vil.
+        - Il ne reste qu’à se soumettre
+        - Au dédain et à la méprise;
+        - Mais je continue de vouloir croire
+        - Que ce sont des sottises, 
+        - Et malgré moi de ne pas vouloir
+        - M’éteindre pour ne plus prendre de place”</div class=p-1> 
+    
+    
+
+
+
+
+
+    <a class="page" href="le-reportage"> 
+        <img src="images-sources/reportage-2.webp" alt="reportage image 1" data-large="images-sources/reportage-2.webp">
+        <img src="images-sources/reportage-3.webp" alt="reportage image 2" data-large="images-sources/reportage-3.webp">
+        <img src="images-sources/reportage-4.webp" alt="reportage image 3" data-large="images-sources/reportage-4.webp">
+        <img src="images-sources/reportage-5.webp" alt="reportage image 4" data-large="images-sources/reportage-5.webp">
+        
+    </a>
+
+    <script>
+        // Sélectionne toutes les images à l'intérieur du conteneur .gallery
+        const images = document.querySelectorAll('.page img');
+
+        images.forEach(img => {
+            // Ajoute un événement de clic à chaque image
+            img.addEventListener('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();  // Empêche tout autre événement non voulu
+                const largeImage = img.getAttribute('data-large');  // Récupère le chemin de l'image en grand
+                window.open(largeImage, '_blank');  // Ouvre l'image en grand dans un nouvel onglet
+            });
+        });
+    </script>
+
+
+
+
+</body>

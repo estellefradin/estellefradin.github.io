@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estelle fradin's website</title>
+    <link rel="icon" type="image/png" href="img/logo.svg">
+    <meta name="description" content="Portfolio d'Estelle Fradin, étudiante en design graphique.">
+    <link rel="stylesheet" href="style.css">
+
+    
+
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-img">
+                <a href="home.html"><img src="images-sources/logo.webp"></a>
+            </div>
+            <nav class="nav">
+                <a href="#" class="current">home</a>
+                <a href="about.html">about</a>
+                <a href="https://www.instagram.com/stll.design">instagram</a>
+            </nav>
+        </div>
+    </header>
+
+
+    
+    <h5>Salon bleu</h5>
+    <h5>2024</h5>
+    <div class="p-1">Pour ce projet il m’importait de créer un petit film d’animation avec du caractère et une esthétique particulière, oscillant entre une ambiance 70’s et une forte inspiration Wes Anderson-esque. Pour ce faire, j’ai opté pour des couleurs chatoyantes et des personnages cartoons. J’ai également voulu apporter mon intérêt pour le design d’espace en intégrant des pièces design comme la lampe Ama 60 (designée par Marie-Cerise Blanc et vendue par Zuri). Salon bleu a été réalisé entièrement à la main en stop motion digital sur l’application Procreate.</div class=p-1> 
+
+
+
+
+
+    <a class="page-large" href="salon-bleu.html"> 
+
+        <button class="oval-button" onclick="window.open('https://youtu.be/ygLJofUpwxI?si=3IJO_sHFSZLmDFPt', '_blank')">
+            Salon Bleu
+        </button>
+    
+        <img src="images-sources/salon-bleu-generique.webp" alt="Salon bleu générique" data-large="images-sources/salon-bleu-generique.webp">
+        <img src="images-sources/salon-bleu-decor.webp" alt="Salon bleu décor" data-large="images-sources/salon-bleu-decor.webp">          
+       
+    </a>
+
+
+
+
+
+    <script>
+        // Sélectionne toutes les images à l'intérieur du conteneur .gallery
+        const images = document.querySelectorAll('.page img');
+
+        images.forEach(img => {
+            // Ajoute un événement de clic à chaque image
+            img.addEventListener('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();  // Empêche tout autre événement non voulu
+                const largeImage = img.getAttribute('data-large');  // Récupère le chemin de l'image en grand
+                window.open(largeImage, '_blank');  // Ouvre l'image en grand dans un nouvel onglet
+            });
+        });
+    </script>
+
+    </body>
+
+
+    
+    <!--
+
+    <video width="600px" controls>
+        <source src="Salon bleu.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la balise vidéo.
+    </video>
+
+-->
+ 

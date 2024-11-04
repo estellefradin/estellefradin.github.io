@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estelle fradin's website</title>
+    <link rel="icon" type="image/png" href="img/logo.svg">
+    <meta name="description" content="Portfolio d'Estelle Fradin, étudiante en design graphique.">
+    <link rel="stylesheet" href="style.css">
+
+    
+
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-img">
+                <a href="home.html"><img src="images-sources/logo.webp"></a>
+            </div>
+            <nav class="nav">
+                <a href="#" class="current">home</a>
+                <a href="about.html">about</a>
+                <a href="https://www.instagram.com/stll.design">instagram</a>
+            </nav>
+        </div>
+    </header>
+
+
+    
+    <h5>BOLD&ALL (revue)</h5>
+    <h5>2024</h5>
+    <div class="p-1">"Le design comme fil conducteur, au service de notre quotidien ou pour le sublimer, au cœur des problématiques actuelles et en lien étroit avec d’autres disciplines. Aller à la rencontre de ceux qui façonnent notre environnement, qui le remplissent de couleurs et de formes, pour nous en faciliter l’appréhension ou afin de nous en adoucir l’expérience."</div class=p-1> 
+    <div class="p-1">Extrait de l'épilogue de la revue</div class=p-1>
+
+
+
+    <a class="page" href="revue.html"> 
+        <img src="images-sources/revue.gif" alt="DGIF de feuilletage" data-large="images-sources/revue.gif">
+        <img src="images-sources/revue-2.webp" alt="BOLD&ALL image 1" data-large="images-sources/revue-2.webp">
+        <img src="images-sources/revue-3.webp" alt="BOLD&ALL image 2" data-large="images-sources/revue-3.webp">
+        <img src="images-sources/revue-4.webp" alt="BOLD&ALL image 3" data-large="images-sources/revue-4.webp">
+        <img src="images-sources/revue-5.webp" alt="BOLD&ALL image 4" data-large="images-sources/revue-5.webp">
+        <img src="images-sources/revue-6.webp" alt="BOLD&ALL image 5" data-large="images-sources/revue-6.webp">
+        
+    </a>
+
+    <script>
+        // Sélectionne toutes les images à l'intérieur du conteneur .gallery
+        const images = document.querySelectorAll('.page img');
+
+        images.forEach(img => {
+            // Ajoute un événement de clic à chaque image
+            img.addEventListener('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();  // Empêche tout autre événement non voulu
+                const largeImage = img.getAttribute('data-large');  // Récupère le chemin de l'image en grand
+                window.open(largeImage, '_blank');  // Ouvre l'image en grand dans un nouvel onglet
+            });
+        });
+    </script>

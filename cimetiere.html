@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estelle fradin's website</title>
+    <link rel="icon" type="image/png" href="img/logo.svg">
+    <meta name="description" content="Portfolio d'Estelle Fradin, étudiante en design graphique.">
+    <link rel="stylesheet" href="style.css">
+
+    
+
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-img">
+                <a href="home.html"><img src="images-sources/logo.webp"></a>
+            </div>
+            <nav class="nav">
+                <a href="#" class="current">home</a>
+                <a href="about.html">about</a>
+                <a href="https://www.instagram.com/stll.design">instagram</a>
+            </nav>
+        </div>
+    </header>
+
+
+    
+    <h5>Cimetière </h5>
+    <h5>2024</h5>
+    <div class="p-1">Brouiller les pistes, semer le doute à travers la photographie. Toutes les photographies de l’édition ont été prises en 2024. Ou bien en 2004? Cimetière est le titre du poème écrit au devant de l’édition et donne ainsi son nom à l’ensemble du projet.</div class=p-1> 
+
+
+
+
+
+
+    <a class="page" href="Cimetiere"> 
+        <img src="images-sources/indatable-1.webp" alt="cimetière image 1" data-large="images-sources/indatable-1.webp">
+        <img src="images-sources/indatable-2.webp" alt="cimetière image 2" data-large="images-sources/indatable-2.webp">
+        <img src="images-sources/indatable-3.webp" alt="cimetière image 3" data-large="images-sources/indatable-3.webp">
+        <img src="images-sources/indatable-4.webp" alt="cimetière image 4" data-large="images-sources/indatable-4.webp"> 
+    </a>
+
+    <script>
+        // Sélectionne toutes les images à l'intérieur du conteneur .gallery
+        const images = document.querySelectorAll('.page img');
+
+        images.forEach(img => {
+            // Ajoute un événement de clic à chaque image
+            img.addEventListener('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();  // Empêche tout autre événement non voulu
+                const largeImage = img.getAttribute('data-large');  // Récupère le chemin de l'image en grand
+                window.open(largeImage, '_blank');  // Ouvre l'image en grand dans un nouvel onglet
+            });
+        });
+    </script>
+    
