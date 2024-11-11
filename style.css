@@ -6,73 +6,75 @@
 }
 
 @font-face {
-    font-family: "miratrix";
-    src: url(webfonts/Miratrix-Normal.otf);
-}
-
-
-@font-face {
-    font-family: "offbit";
-    src: url(webfonts/OffBitTrial-101Bold.otf);
+    font-family: "telegraf" ;
+    src: url(webfonts/PPTelegraf-Regular.otf);
+    font-weight: 400;
 }
 
 @font-face {
-    font-family: "jost";
-    src: url(webfonts/Jost-400-Book.otf);
+    font-family: "telegraf light" ;
+    src: url(webfonts/PPTelegraf-Ultralight.otf);
+    font-weight: 700;
 }
+
 
 
 body {
     margin: 0;
     padding: 0;
-    font-family: "neuemetana";
+    font-family: "telegraf light";
     font-size: 1rem;
     color : rgb(0, 0, 0) ;
-    background : #fffbef ;
+    background : #ffffff ;
     text-decoration: none;
+    line-height: 1.5;
+    overflow-x: hidden;
+    /* color : fffbef ; */
 }
 
-@media (max-width: 280px) {
-    body {
-        font-size: 0.5rem; /* Plus petit sur mobile */
-    }
-}
+
 
 
 
 h1 {
-    color: #2d58d8;
-    font-size: 20px;
-    font-family: "jost";
+    color: blue;
+    font-size: clamp(20px, 8vw + 1rem, 170px);
     text-align: center;
-    margin: 0;
+    font-family: "neuemetana";
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
     padding: 0px;
     text-decoration: none;
+    justify-content: space-between;
 }
 
-
-/* pour les titres des projets */
-h2 {
+.p-présentation {
     color : rgb(0, 0, 0);
     text-align: left;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    font-size: 20px;
-    font-size: clamp(16px, 2vw, 20px);
-    gap : none ;
-}
-
-/* uniquement pour la phrase de présentation */
-h3 {
-    color : rgb(0, 0, 0);
-    text-align: left;
-    margin-left: 10px;
-    margin-top: 50px;
-    max-width: 75px;
-    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    max-width: 1000px;
+    font-size: clamp(16px, 4vw, 50px);
     gap : none ;
     text-decoration: none;
 }
+
+
+.p-présentation-anglais {
+    color : rgb(0, 0, 0);
+    text-align: left;
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    max-width: 1000px;
+    font-size: clamp(16px, 4vw, 50px);
+    gap : none ;
+    text-decoration: none;
+    font-style: italic;
+}
+
 
 /* uniquement pour la flêche*/
 h4 {
@@ -86,21 +88,21 @@ h4 {
     text-decoration: none;
 }
 
-
-/* uniquement pour les phrases du "about" */
-h5 {
+/* pour le titre et la date des projets */
+.p-1 {
     color : rgb(0, 0, 0);
     text-align: left;
     margin-left: 100px;
-    margin-top: 50px;
+    margin-bottom: 5px;
+    margin-top: 20px;
     max-width: 400px;
     font-size: 20px;
-    gap : none ;
     text-decoration: none;
+    line-height: 1.25;
 }
 
-
-.p-1 {
+/* pour le texte des projets*/
+.p-2 {
     color : rgb(0, 0, 0);
     text-align: left;
     margin-left: 100px;
@@ -113,6 +115,69 @@ h5 {
 }
 
 
+/* pour le texte de la page about*/
+.p-about {
+    color : rgb(0, 0, 0);
+    text-align: left;
+    margin-left: 100px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    max-width: 400px;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 1.25;
+}
+
+.p-domaines {
+    color : red;
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    max-width: auto;
+    font-size: clamp(5px, 2vw, 20px);
+    text-decoration: none;
+    line-height: 1.25;
+}
+
+.p-domaines:hover {
+    font-style : italic;
+    color: blue;
+}
+
+.p-footer {
+    color : rgb(0, 0, 0);
+    text-align: left;
+    margin : O ;
+    max-width: auto;
+    font-size: clamp(12px, 2vw, 20px);
+    text-decoration: none;
+    line-height: 1.25;
+}
+
+.p-page-works {
+    color: black;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
+    gap : none ;
+}
+
+.p-page-works:hover {
+    font-style : italic;
+    color: red;
+}
+
+
+hr {
+    border: none; 
+    border-top: 1px solid rgb(0, 0, 0); 
+    width: auto; 
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
 
 img {
@@ -120,22 +185,28 @@ img {
     height : auto ;
 } 
 
-
 header {
-    padding: 1rem;
     position: sticky;
     top : 0 ;
 }
 .header-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+
+    display : flex ;
     justify-content: space-between;
     height: 100%;
     max-width: auto;
     margin: 0 auto;
+    margin-right: 10px;
 
 }
 
+
+.logo-textuel {
+    align-self: center;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
 
 .logo-img {
     width: 75px;
@@ -144,11 +215,11 @@ header {
     background-size: contain;
 }
 
-
 .nav {
-    justify-self: end;
+    justify-content: space-between;
+    align-self: right;
+    margin-top: 10px;
 }
-
 
 .nav a {
     margin-left: 1rem;
@@ -156,23 +227,71 @@ header {
     color: black;
 }
 
-
-.current {
-    font-weight: bolder;
+.nav a:hover {
+    color: red;
+    font-style : italic;
 }
 
-.projet {
-    text-decoration: none;
+.current {
+    font-style: italic;
+    color: blue;
+}
+
+::selection {
+    background-color: red; 
+    color: #fffbef; 
 }
 
 .projets {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    display: flex;
+    gap: 0px;
     max-width: 99%;
-    margin: 0 auto;
-    margin-top: 75px ; 
+    margin-top: 75px 0 auto 0 ; 
+    margin-left: 20px;
+    margin-right : none;
+    scrollbar-width: none; 
+    overflow-x: auto;
 }
+
+
+.projets::-webkit-scrollbar {
+    display: none; /* Masque la barre de défilement sur Chrome, Safari et Edge */
+}
+
+.projets a:hover {
+    font-style : italic;
+    color: red;
+} 
+
+.projet {
+    text-decoration: none;
+    flex: 0 0 auto;
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 600px;
+}
+
+.projet img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.projet:hover {
+    transform: scale(0.9); /* Effet d'agrandissement au survol */
+}
+
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap:0px;
+    margin: 0;
+    scroll-behavior: smooth; 
+}
+
+
+
 
 @media (min-width: 700px) {
     .projets {
@@ -205,44 +324,107 @@ header {
     text-decoration: none;
 }
 
-.oval-button {
-    background-color: blue; /* Couleur de fond verte */
-    color: #fffbef ; /* Couleur du texte */
-    padding: 20px 5px; /* Espacement intérieur */
+.oval-button-salon-bleu {
+    background-color: blue;
+    color: #fffbef ; 
+    padding: 20px 5px; 
     margin-top: 100px;
     margin-bottom: 50px;
     width: 250px;
-    border: none; /* Pas de bordure */
-    border-radius: 30px; /* Bordure arrondie pour créer l'effet ovale */
-    font-size: 28px; /* Taille du texte */
-    font-family: "neuemetana"; /* Police de caractères */
-    cursor: pointer; /* Pointeur de souris en forme de main */
-    transition: background-color 0.3s ease; /* Animation douce lors du survol */
+    border: none; 
+    border-radius: 30px; 
+    font-size: 28px; 
+    font-family: "telegraf"; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
     text-align: center;
     text-decoration: none;
     place-self: center;
 }
 
-.oval-button:hover {
+.oval-button-salon-bleu:hover {
     background-color: #f94301; /* Couleur plus foncée au survol */
     text-decoration: none;
 }
 
-#tothetop_ {
+.oval-button-nahen {
+    background-color: rgb(124, 107, 0); 
+    color: #fffbef ; 
+    padding: 20px 5px; 
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 250px;
+    border: none; 
+    border-radius: 30px; 
+    font-size: 28px; 
+    font-family: "telegraf"; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    text-align: center;
+    text-decoration: none;
+    place-self: center;
+}
+
+.oval-button-nahen:hover {
+    
+    background-color:rgb(238, 218, 73);
+    text-decoration: none;
+}
+
+
+#toTopBtn {
     position: fixed;
     bottom: 3rem;
     right: 3rem;
     cursor: pointer;
-    font-size: 15px;
-    font-family: "neuemetana";
+    font-size: 30px;
     text-align: right;
     font-weight: bold;
     color: black;
     text-decoration: none;
     z-index: 99;
+    background: none;
+    border: none;
+} 
+
+#toTopBtn:hover {
+    color: #f94301;
+    text-decoration: none;
 }
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+footer {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between; 
+    padding: 20px;
+    font-family: "telegraf light";
+    position: sticky;
+    max-width: 100%;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    font-style: italic;
+    color: red;
+}
 
 
 
