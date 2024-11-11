@@ -51,13 +51,29 @@
 
 
 
-    <a class="page" href="Jaquettes"> 
-        <img src="images-sources/jaquette 8.jpg" alt="jaquette 1">
-        <img src="images-sources/jaquette 7.jpg" alt="jaquette 2">
-        <img src="images-sources/jaquette 3.jpg" alt="jaquette 3">
-        <img src="images-sources/jaquette 4.jpg" alt="jaquette 4">
-        
+    <a class="page" href="jaquettes.html"> 
+            <img src="images-sources/jaquette 8.jpg" alt="jaquette miss islande 1" data-large="images-sources/jaquette 8.jpg">
+            <img src="images-sources/jaquette 7.jpg" alt="jaquette miss islande 2" data-large="images-sources/jaquette 7.jpg">
+            <img src="images-sources/jaquette 3.jpg" alt="jaquette rosa candida 1" data-large="images-sources/jaquette 3.jpg">
+            <img src="images-sources/jaquette 4.jpg" alt="jaquette rosa candida 2" data-large="images-sources/jaquette 4.jpg">
     </a>
+
+
+    <script>
+        // Sélectionne toutes les images à l'intérieur du conteneur .gallery
+        const images = document.querySelectorAll('.page img');
+
+        images.forEach(img => {
+            // Ajoute un événement de clic à chaque image
+            img.addEventListener('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();  // Empêche tout autre événement non voulu
+                const largeImage = img.getAttribute('data-large');  // Récupère le chemin de l'image en grand
+                window.open(largeImage, '_blank');  // Ouvre l'image en grand dans un nouvel onglet
+            });
+        });
+    </script>
+
 
 </body>
 
