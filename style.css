@@ -140,10 +140,6 @@ h4 {
     line-height: 1.25;
 }
 
-.p-domaines:hover {
-    font-style : italic;
-    color: blue;
-}
 
 .p-footer {
     color : rgb(0, 0, 0);
@@ -156,18 +152,15 @@ h4 {
 }
 
 .p-page-works {
-    color: black;
+    position: absolute;
+    bottom: 100%;
+    color: rgb(0, 0, 0);
     text-align: left;
-    margin-top: 20px;
-    margin-bottom: 5px;
     font-size: 20px;
     font-size: clamp(16px, 2vw, 20px);
     gap : none ;
-}
-
-.p-page-works:hover {
-    font-style : italic;
-    color: red;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
 }
 
 
@@ -197,7 +190,6 @@ header {
     max-width: auto;
     margin: 0 auto;
     margin-right: 10px;
-
 }
 
 
@@ -225,7 +217,9 @@ header {
     margin-left: 1rem;
     text-decoration: none;
     color: black;
+    mix-blend-mode: difference;
 }
+
 
 .nav a:hover {
     color: red;
@@ -258,17 +252,16 @@ header {
     display: none; /* Masque la barre de défilement sur Chrome, Safari et Edge */
 }
 
-.projets a:hover {
-    font-style : italic;
-    color: red;
-} 
-
 .projet {
+    position: relative; 
     text-decoration: none;
     flex: 0 0 auto;
-    overflow: hidden;
     transition: transform 0.3s;
     width: 600px;
+}
+
+.projet:hover .p-page-works {
+    opacity: 1;
 }
 
 .projet img {
