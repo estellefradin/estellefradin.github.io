@@ -46,9 +46,11 @@
     <div class="p-2">Extrait de l'édito de la revue</div>
 
 
+    
+
 
     <a class="page" href="revue.html"> 
-        <img src="images-sources/revue.gif" alt="DGIF de feuilletage" data-large="images-sources/revue.gif">
+        <video src="images-sources/revue.mp4" alt="DGIF de feuilletage" data-large="images-sources/revue.mp4"></video>
         <img src="images-sources/revue-2.webp" alt="BOLD&ALL image 1" data-large="images-sources/revue-2.webp">
         <img src="images-sources/revue-3.webp" alt="BOLD&ALL image 2" data-large="images-sources/revue-3.webp">
         <img src="images-sources/revue-4.webp" alt="BOLD&ALL image 3" data-large="images-sources/revue-4.webp">
@@ -57,34 +59,15 @@
         
     </a>
 
-    <script>
-        // Sélectionne toutes les images à l'intérieur du conteneur .gallery
-        const images = document.querySelectorAll('.page img');
-
-        images.forEach(img => {
-            // Ajoute un événement de clic à chaque image
-            img.addEventListener('click', function(event) {
-                event.preventDefault();
-                event.stopPropagation();  // Empêche tout autre événement non voulu
-                const largeImage = img.getAttribute('data-large');  // Récupère le chemin de l'image en grand
-                window.open(largeImage, '_blank');  // Ouvre l'image en grand dans un nouvel onglet
-            });
-        });
-    </script>
-
-</body>
-
-
 <hr>
 
+
 <footer>
-    
     <div class="footer-column">
         <div class="p-footer">CONTACT &#x2199</div> 
         <br>
         <div class="p-footer">estellefradin.esad@gmail.com</div>
     </div>
-
     <div class="footer-column">
         <div class="p-footer">SUIVEZ-MOI &#x2199</div> 
         <p></p>
@@ -92,7 +75,6 @@
             <a href="https://www.linkedin.com/in/estelle-fradin/"><div class="p-footer">LinkedIn &#8599</div></a>
             <a href="https://www.youtube.com/@EstelleFradin"><div class="p-footer">Youtube &#8599</div></a>
     </div>
-
     <div>
         <div class="p-footer">INFOS &#x2199</div> 
         <br>
@@ -100,7 +82,34 @@
         <div class="p-footer">Dernier update : novembre 2024</div>
         <div class="p-footer">Typographie : Telegraf-Pangram Pangram</div>
     </div>
-
-
-    
 </footer>
+
+
+
+
+
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+<script> 
+const mediaElements = document.querySelectorAll('.page img, .page video');
+
+mediaElements.forEach(media => {
+    media.addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();  
+        
+        if (media.tagName === 'IMG') {
+            const largeImage = media.getAttribute('data-large');  
+           
+        } else if (media.tagName === 'VIDEO') {
+            const videoSrc = media.getAttribute('src');
+        }
+    });
+});
+</script>  
+    
+<script src="modal.js"></script>
+</body>
+</html>

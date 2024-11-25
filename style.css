@@ -29,7 +29,6 @@ body {
     text-decoration: none;
     line-height: 1.5;
     overflow-x: hidden;
-    /* color : fffbef ; */
 }
 
 
@@ -62,6 +61,19 @@ h1 {
 }
 
 
+.p-présentation a {
+    text-decoration: none;
+    color: black;
+}
+
+.p-présentation a:hover {
+    text-decoration: none;
+    color: red;
+    font-style: italic;
+}
+
+
+
 .p-présentation-anglais {
     color : rgb(0, 0, 0);
     text-align: left;
@@ -73,6 +85,19 @@ h1 {
     gap : none ;
     text-decoration: none;
     font-style: italic;
+}
+
+
+
+.p-présentation-anglais a {
+    text-decoration: none;
+    color: black;
+}
+
+.p-présentation-anglais a:hover {
+    text-decoration: none;
+    color: red;
+    font-style: normal;
 }
 
 
@@ -128,6 +153,18 @@ h4 {
     line-height: 1.25;
 }
 
+.p-about a {
+    text-decoration: none;
+    color: black;
+}
+
+.p-about a:hover {
+    text-decoration: none;
+    color: red;
+    font-style: italic;
+}
+
+
 .p-domaines {
     color : red;
     text-align: right;
@@ -146,7 +183,7 @@ h4 {
     text-align: left;
     margin : O ;
     max-width: auto;
-    font-size: clamp(12px, 2vw, 20px);
+    font-size: clamp(16px, 2vw, 20px);
     text-decoration: none;
     line-height: 1.25;
 }
@@ -317,6 +354,44 @@ header {
     text-decoration: none;
 }
 
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1000; /* Above all other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scrolling if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+
+
+}
+
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content {
+    margin: 50px auto; /* Center the modal on the screen */
+    display: block;
+    width: auto; 
+    max-width: 700px;
+}
+
+.modal-content:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+
 .oval-button-salon-bleu {
     background-color: blue;
     color: #fffbef ; 
@@ -386,6 +461,38 @@ header {
 }
 
 
+.scroll-right {
+    position: absolute;
+    right: 25px;
+    top: 60%;
+    color: rgb(0, 0, 0);
+    border: none;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 20%;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+
+.scroll-left {
+    position: absolute;
+    left: 25px;
+    top: 60%;
+    color: black;
+    border: none;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 20%;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -393,18 +500,16 @@ html {
 
 
 footer {
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between; 
     padding: 20px;
+    gap: 20px;
     font-family: "telegraf light";
-    position: sticky;
+    position: relative;
     max-width: 100%;
 }
 
-.footer-column {
-    flex: 1;
-}
 
 .footer-column p,
 .footer-column a {

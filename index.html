@@ -11,8 +11,6 @@
 
 
 
-
-
 <body>
 
 
@@ -43,8 +41,8 @@
 
 
 
-    <div class=p-présentation>&rarr; Bonjour! Je suis Estelle Fradin, étudiante en design graphique à l'Esad d'Amiens depuis 2023.</div>
-    <div class=p-présentation-anglais>&rarr; Hello! I am Estelle Fradin, a graphic design student from esad Amiens since 2023.</div>
+    <div class=p-présentation>&rarr; Bonjour! Je suis Estelle Fradin, étudiante en&nbsp; design graphique à <a href="https://www.esad-amiens.fr"> l’Esad d’Amiens</a> depuis 2023.</div>
+    <div class=p-présentation-anglais>&rarr; Hello! I am Estelle Fradin, a graphic design student from <a href="https://www.esad-amiens.fr"> Esad Amiens</a> since 2023.</div>
 
 </head>
 <body>
@@ -55,27 +53,6 @@
 
 
     <button id="toTopBtn" onclick="scrollToTop()"> &#8593;</button>
-
-    <script>
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            const toTopBtn = document.getElementById("toTopBtn");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                toTopBtn.style.display = "block"; 
-            } else {
-                toTopBtn.style.display = "none"; 
-            }
-        }
-
-        
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' 
-            });
-        }
-    </script>
 
 
 <hr>
@@ -104,11 +81,30 @@
         <div class="p-footer">Typographie : Telegraf-Pangram Pangram</div>
     </div>
 
-
-    
 </footer>
 
 
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        const toTopBtn = document.getElementById("toTopBtn");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            toTopBtn.style.display = "block"; 
+        } else {
+            toTopBtn.style.display = "none"; 
+        }
+    }
+
+    
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' 
+        });
+    }
+</script>
 
 
 

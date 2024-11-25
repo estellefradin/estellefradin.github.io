@@ -46,6 +46,9 @@
 
 <section class="horizontal-scroll">
 
+
+    <button class="scroll-left">&larr;</button>
+
     <div class="projets">
 
         <a class="projet" href="revue.html">  
@@ -84,12 +87,6 @@
                 <img src="images-sources/reportage-1.webp" alt="Couverture édition reportage"> 
         </a>
 
-
-        
-
-
-      
-
        
         <a class="projet" href="coffret-artiste.html">
                 <div class="p-page-works">A.A.O in a nutshell</div>
@@ -99,47 +96,16 @@
         <a class="projet" href="jaquettes.html"> 
             <div class="p-page-works">Jaquettes</div>
                 <img src="images-sources/jaquette-roman-carre.webp" alt="Revisite de jaquettes">
-
-        
-
-    </a>
- 
-
-
-        
-
-
+        </a>
 
     </div>
+
+    <button class="scroll-right">&rarr;</button>
+
 </section> 
 
 
 <br>
-
-
-
-    <button id="toTopBtn" onclick="scrollToTop()">&#8593;</button>
-
-    <script>
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            const toTopBtn = document.getElementById("toTopBtn");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                toTopBtn.style.display = "block"; 
-            } else {
-                toTopBtn.style.display = "none"; 
-            }
-        }
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' 
-            });
-        }
-    </script>
-
 
 
 <hr>
@@ -168,6 +134,41 @@
         <div class="p-footer">Typographie : Telegraf-Pangram Pangram</div>
     </div>
 
-
-    
 </footer>
+
+
+
+
+
+
+
+
+<script>
+
+document.querySelector('.scroll-right').addEventListener('click', () => {
+    const container = document.querySelector('.projets');
+    container.scrollBy({
+        left: 600, 
+        behavior: 'smooth' 
+    });
+});
+
+</script>
+
+
+<script>
+
+document.querySelector('.scroll-left').addEventListener('click', () => {
+    const container = document.querySelector('.projets');
+    container.scrollBy({
+        left: -600, 
+        behavior: 'smooth' 
+    });
+});
+
+
+    </script>
+
+
+</body>
+</html>
