@@ -121,9 +121,9 @@ h4 {
     margin-bottom: 5px;
     margin-top: 20px;
     max-width: 400px;
-    font-size: 20px;
+    font-size: clamp(16px, 3vw, 20px);
     text-decoration: none;
-    line-height: 1.25;
+    line-height: 1.4;
 }
 
 /* pour le texte des projets*/
@@ -132,11 +132,12 @@ h4 {
     text-align: left;
     margin-left: 100px;
     margin-top: 50px;
+    margin-right: 50px;
     max-width: 400px;
-    font-size: 20px;
+    font-size: clamp(16px, 3vw, 20px);
     gap : none ;
     text-decoration: none;
-    line-height: 1.25;
+    line-height: 1.4;
 }
 
 
@@ -150,7 +151,7 @@ h4 {
     max-width: 400px;
     font-size: 20px;
     text-decoration: none;
-    line-height: 1.25;
+    line-height: 1.4;
 }
 
 .p-about a {
@@ -335,6 +336,10 @@ header {
     }
 }
 
+
+
+
+
 .page {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -364,7 +369,7 @@ header {
     width: 100%;
     height: 100%;
     overflow: auto; 
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.8); 
 
 }
 
