@@ -1,0 +1,328 @@
+
+@font-face {
+    font-family: "droulers" ;
+    src: url(webfonts/droulers.otf);
+}
+
+
+@font-face {
+    font-family: "oracle" ;
+    src: url(webfonts/oracle.otf);
+}
+
+
+@font-face {
+    font-family: "half" ;
+    src: url(webfonts/half.otf);
+}
+
+
+@font-face {
+  font-family: "drifter";
+  src: url(webfonts/drifter.otf);
+}
+
+
+@font-face {
+  font-family: "ballpill";
+  src: url(webfonts/ballpill.otf);
+}
+@font-face {
+  font-family: "droulers-italic";
+  src: url(webfonts/droulers-italic.otf);
+}
+
+/* box sizing */
+ *{
+    box-sizing: border-box;
+  }
+
+  :root {
+    overscroll-behavior: none;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+
+
+  body{
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(233, 242, 250);
+  }
+  .projets{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    gap:12px;
+    justify-content: center; */
+  }
+  .projets div:hover{
+    cursor: pointer;
+    }
+
+  .projets img:hover{
+    scale : 2;
+  }
+
+  .projet div{
+    font-family: 'droulers';
+  }
+  .projet{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+  .fixed{
+    position: fixed;
+  }
+  .projets.fixed{
+    top:100px;
+  }
+  .overlay{
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 48px;
+    top: 0;
+    left:0; 
+ 
+  }
+  .close{
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    bottom : 24px;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 48px;
+    background: #000;
+    border-radius: 24px;
+  }
+
+  .wrap{
+    width:100%;
+  }
+
+  .fiche{
+    margin: 0px auto;
+    max-width: 640px;
+    background: none;
+    padding: 0 20px 20px;  
+    margin-bottom: 50px;
+  }
+
+  .fiche img{
+    margin:0 -20px 20px;
+    width: calc(100% + 40px);
+  }
+
+  .fiche>div{
+    color:rgb(233, 242, 250);
+    margin-bottom:50px;
+    font-family: 'oracle';
+  }
+
+  .fiche.gallery{
+    margin: 0;
+  }
+
+  .header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right : 0px;
+    bottom : 0px;
+    width: 100%;
+    background: none;
+    padding: none;
+    z-index: 999;
+  }
+
+  .header-container {
+  
+    display: flex;;
+    font-family: 'ballpill';
+    height: 100%;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 20px;
+    justify-content: space-between;
+    text-decoration: none;
+    
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'droulers';
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+    background: none;
+  }
+
+  .nav a {
+    color: rgb(123, 9, 9);
+    text-decoration: none;
+  }
+  .nav a:hover{
+    color: rgb(252, 0, 0);
+    text-decoration: none;
+    font-family: "droulers-italic";
+  }
+  .current {
+    background: none;
+    color:black;
+    text-decoration: none;
+  }
+
+  .about a{
+    color: rgb(123, 9, 9);
+    text-decoration: none;
+  }
+
+  .about a:hover{
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+  }
+
+  /* titre nom portfolio */
+  h1{
+    font-size: 50px;
+    font-family: 'droulers';
+    padding: 0;
+    justify-self: center;
+    margin-top: 0px;
+    color: rgb(123, 9, 9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+
+  /* titres projets */
+  h2{
+    font-size: 24px;
+    font-family: 'droulers';
+    padding: 0;
+    justify-self: center;
+  }
+  h3 {
+    font-size: 40px;
+    font-family: 'droulers';
+    padding: 0;
+    justify-self: center;
+    color: rgb(123, 9, 9);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    width: 65%;
+  }
+
+  .modale{
+    margin-bottom: 20px;
+    font-family: 'half';
+    color: rgb(233, 242, 250);
+  } 
+
+
+  .projet-1 {
+    background-image:url(https://assets.codepen.io/16327/ui-flair-4.png);
+  }
+
+
+
+.footer-links {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    justify-self: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 10%;
+}
+
+.p-footer-links{
+  font-size: 15px;
+  font-family: 'droulers';
+  padding: 0;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.footer-links a{
+  color: rgb(123, 9, 9);
+  text-decoration: none;
+}
+
+.footer-links a:hover{
+  color: red;
+  text-decoration: none;
+}
+
+
+.footer-infos {
+  justify-self: flex-end;
+  justify-content: flex-end;
+  padding: 20px;
+  gap: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: auto;
+}
+
+.p-footer-infos{
+  font-size: 15px;
+  font-family: 'droulers';
+  padding: 0;
+  justify-content: center;
+  text-decoration: none;
+  justify-self: right;
+  color : rgb(123, 9, 9);
+}
+
+.footer-infos a{
+  color: rgb(123, 9, 9);
+  text-decoration: none;
+}
+
+.footer-infos a:hover{
+  color: red;
+  text-decoration: none;
+  font-family: "droulers-italic";
+}
+
+::selection {
+  background-color: rgb(123, 9, 9); 
+  color: rgb(245, 249, 252); 
+}
