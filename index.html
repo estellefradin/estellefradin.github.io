@@ -1,112 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estelle Fradin</title>
-    <link rel="icon" type="image/webp" href="images-sources/logo.svg">
-    <meta name="description" content="Portfolio d'Estelle Fradin, étudiante en design graphique.">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>estelle fradin java portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 
 
 <body>
 
-
-    <div class="logo-textuel">
-        <a href="index.html"> 
-            <img src="images-sources/logo textuel 3.png">
-        </a>
+<header>
+    <div class="header-container">
+        <nav class="nav">
+            <a href="about.html">about</a>
+        </nav>
     </div>
 
-    <header>
-        <div class="header-container">
-        <!--
-            <div class="logo-img">
-                <a href="index.html"><img src="images-sources/logo.webp"></a>
-            </div>
-        -->
-            <nav class="nav">
-                <a href="index.html" class="current">home</a>
-            </nav>
-            <nav class="nav">
-                <a href="works.html">works</a>
-            </nav>
-            <nav class="nav">
-                <a href="about.html">about</a>
-            </nav>
-        </div>
-    </header> 
+    <h1>Estelle Fradin</h1>
+</header> 
 
 
 
-    <div class=p-présentation>&rarr; Bonjour! Je suis Estelle Fradin, étudiante en&nbsp;design graphique à <a href="https://www.esad-amiens.fr"> l’Esad d’Amiens</a> depuis 2023.</div>
-    <div class=p-présentation-anglais>&rarr; Hello! I am Estelle Fradin, a graphic design student from <a href="https://www.esad-amiens.fr"> Esad Amiens</a> since 2023.</div>
 
-</head>
-<body>
-
-   
-    <div class="p-domaines"> [posters-édition-typographie-webdesign-html/css-animation-illustration] </div>
+  <div class="projets"></div>
+  <!-- gsap -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.7.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/MotionPathPlugin.min.js"></script>
+  <script type="module" src="main.js"></script>
 
 
+</body>
 
-    <button id="toTopBtn" onclick="scrollToTop()"> &#8593;</button>
 
-
-<hr>
 
 <footer>
     
-    <div class="footer-column">
-        <div class="p-footer">CONTACT&nbsp;&#x2199</div> 
-        <br>
-        <a href="mailto:estellefradin.esad@gmail.com" class="email-link"> <div class="p-footer">Mail&nbsp;&#8599 </div></a>
-    </div>
+  <div class="footer-links">
+      <a href="mailto:estellefradin.esad@gmail.com" class="email-link"> <div class="p-footer-links">Mail&nbsp; </div></a>
+      <a href="https://www.instagram.com/stll.design/"><div class="p-footer-links">Instagram&nbsp;</div></a>
+      <a href="https://www.linkedin.com/in/estelle-fradin/"><div class="p-footer-links">LinkedIn&nbsp;</div></a>
+      <a href="https://www.youtube.com/@EstelleFradin"><div class="p-footer-links">Youtube&nbsp;</div></a>
+  </div>
 
-    <div class="footer-column">
-        <div class="p-footer">SUIVEZ-MOI&nbsp;&#x2199</div> 
-        <p></p>
-            <a href="https://www.instagram.com/stll.design/"><div class="p-footer">Instagram&nbsp;&#8599</div></a>
-            <a href="https://www.linkedin.com/in/estelle-fradin/"><div class="p-footer">LinkedIn&nbsp;&#8599</div></a>
-            <a href="https://www.youtube.com/@EstelleFradin"><div class="p-footer">Youtube&nbsp;&#8599</div></a>
-    </div>
-
-    <div>
-        <div class="p-footer">INFOS&nbsp;&#x2199</div> 
-        <br>
-        <div class="p-footer">@Estelle Fradin 2024</div>
-        <div class="p-footer"></div>
-        <div class="p-footer">Font : Telegraf-Pangram Pangram</div>
-    </div>
+  <div class="footer-infos">
+  <div class="p-footer-infos">@Estelle Fradin 2025</div>
+  <div class="p-footer-infos">Font : Droulers by <a href="https://bureaubrut.com/">Bureau Brut</a></div>
+  </div>
 
 </footer>
 
 
 
-<script>
-    window.onscroll = function() {scrollFunction()};
+<!--
+<footer>
+  <div class="p-footer">Estelle Fradin</div>
 
-    function scrollFunction() {
-        const toTopBtn = document.getElementById("toTopBtn");
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            toTopBtn.style.display = "block"; 
-        } else {
-            toTopBtn.style.display = "none"; 
-        }
-    }
-
-    
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' 
-        });
-    }
-</script>
+</footer>
+-->
 
 
 
-</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+
+
+
 </html>

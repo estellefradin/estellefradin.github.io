@@ -1,583 +1,328 @@
 
-
 @font-face {
-    font-family: "neuemetana" ;
-    src: url(webfonts/NeueMetanaMono-Light.otf);
-}
-
-@font-face {
-    font-family: "telegraf" ;
-    src: url(webfonts/PPTelegraf-Regular.otf);
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "telegraf light" ;
-    src: url(webfonts/PPTelegraf-Ultralight.otf);
-    font-weight: 700;
+    font-family: "droulers" ;
+    src: url(webfonts/droulers.otf);
 }
 
 
+@font-face {
+    font-family: "oracle" ;
+    src: url(webfonts/oracle.otf);
+}
 
-body {
+
+@font-face {
+    font-family: "half" ;
+    src: url(webfonts/half.otf);
+}
+
+
+@font-face {
+  font-family: "drifter";
+  src: url(webfonts/drifter.otf);
+}
+
+
+@font-face {
+  font-family: "ballpill";
+  src: url(webfonts/ballpill.otf);
+}
+@font-face {
+  font-family: "droulers-italic";
+  src: url(webfonts/droulers-italic.otf);
+}
+
+/* box sizing */
+ *{
+    box-sizing: border-box;
+  }
+
+  :root {
+    overscroll-behavior: none;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+
+
+  body{
     margin: 0;
-    padding: 0;
-    font-family: "telegraf light";
-    font-size: 1rem;
-    color : rgb(0, 0, 0) ;
-    background : #ffffff ;
-    text-decoration: none;
-    line-height: 1.5;
-    overflow-x: hidden;
-}
+    padding: 20px;
+    background-color: rgb(233, 242, 250);
+  }
+  .projets{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    gap:12px;
+    justify-content: center; */
+  }
+  .projets div:hover{
+    cursor: pointer;
+    }
 
+  .projets img:hover{
+    scale : 2;
+  }
 
-
-
-
-h1 {
-    color: blue;
-    font-size: clamp(20px, 8vw + 1rem, 170px);
-    text-align: center;
-    font-family: "neuemetana";
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    padding: 0px;
-    text-decoration: none;
-    justify-content: space-between;
-}
-
-.p-présentation {
-    color : rgb(0, 0, 0);
-    text-align: left;
-    margin-left: 100px;
-    margin-right: 20px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    max-width: 1000px;
-    font-size: clamp(25px, 4vw, 50px);
-    gap : none ;
-    text-decoration: none;
-}
-
-
-.p-présentation a {
-    text-decoration: none;
-    color: red;
-}
-
-.p-présentation a:hover {
-    text-decoration: none;
-    color: red;
-    font-style: italic;
-}
-
-
-
-.p-présentation-anglais {
-    color : rgb(0, 0, 0);
-    text-align: left;
-    margin-left: 100px;
-    margin-top: 100px;
-    margin-right: 20px;
-    margin-bottom: 100px;
-    max-width: 1000px;
-    font-size: clamp(25px, 4vw, 50px);
-    gap : none ;
-    text-decoration: none;
-    font-style: italic;
-}
-
-.p-présentation-anglais a {
-    text-decoration: none;
-    color: red;
-}
-
-.p-présentation-anglais a:hover {
-    text-decoration: none;
-    color: red;
-    font-style: normal;
-}
-
-
-/* uniquement pour la flêche*/
-h4 {
-    color : rgb(0, 0, 0);
-    text-align: center;
-    margin-left: auto;
-    margin-top: 75px;
-    max-width: auto;
-    font-size: 20px;
-    gap : none ;
-    text-decoration: none;
-}
-
-/* pour le titre et la date des projets */
-.p-1 {
-    color : rgb(0, 0, 0);
-    text-align: left;
-    margin-left: 100px;
-    margin-bottom: 5px;
-    margin-top: 20px;
-    max-width: 400px;
-    font-size: clamp(16px, 3vw, 20px);
-    text-decoration: none;
-    line-height: 1.4;
-}
-
-/* pour le texte des projets*/
-.p-2 {
-    color : rgb(0, 0, 0);
-    text-align: left;
-    margin-left: 100px;
-    margin-top: 50px;
-    margin-right: 50px;
-    max-width: 400px;
-    font-size: clamp(16px, 3vw, 20px);
-    gap : none ;
-    text-decoration: none;
-    line-height: 1.4;
-}
-
-
-/* pour le texte de la page about*/
-.p-about {
-    color : rgb(0, 0, 0);
-    text-align: left;
-    margin-left: 100px;
-    margin-bottom: 5px;
-    margin-top: 10px;
-    max-width: 400px;
-    font-size: 20px;
-    text-decoration: none;
-    line-height: 1.4;
-}
-
-.p-about a {
-    text-decoration: none;
-    color: red;
-}
-
-.p-about a:hover {
-    text-decoration: none;
-    color: red;
-    font-style: italic;
-}
-
-
-.p-domaines {
-    color : red;
-    text-align: right;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 5px;
-    margin-top: 10px;
-    max-width: auto;
-    font-size: clamp(16px, 2vw, 20px);
-    text-decoration: none;
-    line-height: 1.25;
-}
-
-
-.p-footer {
-    color : rgb(0, 0, 0);
-    text-align: left;
-    margin : O ;
-    margin-right: 20px;
-    max-width: auto;
-    font-size: clamp(16px, 2vw, 20px);
-    text-decoration: none;
-    line-height: 1.25;
-}
-
-.p-page-works {
+  .projet div{
+    font-family: 'droulers';
+  }
+  .projet{
     position: absolute;
-    bottom: 100%;
-    color: rgb(0, 0, 0);
-    text-align: left;
-    font-size: 20px;
-    font-size: clamp(16px, 2vw, 20px);
-    gap : none ;
-    opacity: 0; 
-    transition: opacity 0.3s ease;
-}
+    top: 0;
+    left: 0;
+    width: 100px;
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+  .fixed{
+    position: fixed;
+  }
+  .projets.fixed{
+    top:100px;
+  }
+  .overlay{
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 48px;
+    top: 0;
+    left:0; 
+ 
+  }
+  .close{
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    bottom : 24px;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 48px;
+    background: #000;
+    border-radius: 24px;
+  }
 
+  .wrap{
+    width:100%;
+  }
 
-hr {
-    border: none; 
-    border-top: 1px solid rgb(0, 0, 0); 
-    width: auto; 
-    margin-left: 20px;
-    margin-right: 20px;
-}
+  .fiche{
+    margin: 0px auto;
+    max-width: 640px;
+    background: none;
+    padding: 0 20px 20px;  
+    margin-bottom: 50px;
+  }
 
+  .fiche img{
+    margin:0 -20px 20px;
+    width: calc(100% + 40px);
+  }
 
-img {
-    max-width: 100%;
-    height : auto ;
-} 
+  .fiche>div{
+    color:rgb(233, 242, 250);
+    margin-bottom:50px;
+    font-family: 'oracle';
+  }
 
-header {
+  .fiche.gallery{
+    margin: 0;
+  }
+
+  .header{
     position: sticky;
-    top : 0 ;
-}
-.header-container {
+    top: 0;
+    left: 0;
+    right : 0px;
+    bottom : 0px;
+    width: 100%;
+    background: none;
+    padding: none;
+    z-index: 999;
+  }
 
-    display : flex ;
-    justify-content: space-between;
+  .header-container {
+  
+    display: flex;;
+    font-family: 'ballpill';
     height: 100%;
-    max-width: auto;
-    margin: 0 auto;
-    margin-right: 10px;
-}
-
-
-.logo-textuel {
-    align-self: center;
-    margin-left: 15px;
-    margin-top: 10px;
-    margin-right: 15px;
-}
-
-.logo-img {
-    width: 75px;
-    height: 75px;
-    background: url('logo.svg') no-repeat center;
-    background-size: contain;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 20px;
+    justify-content: space-between;
+    text-decoration: none;
+    
 }
 
 .nav {
-    justify-content: space-between;
-    align-self: right;
-    margin-top: 10px;
-}
-
-.nav a {
-    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'droulers';
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    font-size: 30px;
     text-decoration: none;
-    color: black;
-    mix-blend-mode: difference;
+    text-align: center;
+    background: none;
+  }
+
+  .nav a {
+    color: rgb(123, 9, 9);
+    text-decoration: none;
+  }
+  .nav a:hover{
+    color: rgb(252, 0, 0);
+    text-decoration: none;
+    font-family: "droulers-italic";
+  }
+  .current {
+    background: none;
+    color:black;
+    text-decoration: none;
+  }
+
+  .about a{
+    color: rgb(123, 9, 9);
+    text-decoration: none;
+  }
+
+  .about a:hover{
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+  }
+
+  /* titre nom portfolio */
+  h1{
+    font-size: 50px;
+    font-family: 'droulers';
+    padding: 0;
+    justify-self: center;
+    margin-top: 0px;
+    color: rgb(123, 9, 9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+
+  /* titres projets */
+  h2{
+    font-size: 24px;
+    font-family: 'droulers';
+    padding: 0;
+    justify-self: center;
+  }
+  h3 {
+    font-size: 40px;
+    font-family: 'droulers';
+    padding: 0;
+    justify-self: center;
+    color: rgb(123, 9, 9);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    width: 65%;
+  }
+
+  .modale{
+    margin-bottom: 20px;
+    font-family: 'half';
+    color: rgb(233, 242, 250);
+  } 
+
+
+  .projet-1 {
+    background-image:url(https://assets.codepen.io/16327/ui-flair-4.png);
+  }
+
+
+
+.footer-links {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    justify-self: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 10%;
+}
+
+.p-footer-links{
+  font-size: 15px;
+  font-family: 'droulers';
+  padding: 0;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.footer-links a{
+  color: rgb(123, 9, 9);
+  text-decoration: none;
+}
+
+.footer-links a:hover{
+  color: red;
+  text-decoration: none;
 }
 
 
-.nav a:hover {
-    color: red;
-    font-style : italic;
+.footer-infos {
+  justify-self: flex-end;
+  justify-content: flex-end;
+  padding: 20px;
+  gap: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: auto;
 }
 
-.current {
-    font-style: italic;
-    color: blue;
+.p-footer-infos{
+  font-size: 15px;
+  font-family: 'droulers';
+  padding: 0;
+  justify-content: center;
+  text-decoration: none;
+  justify-self: right;
+  color : rgb(123, 9, 9);
+}
+
+.footer-infos a{
+  color: rgb(123, 9, 9);
+  text-decoration: none;
+}
+
+.footer-infos a:hover{
+  color: red;
+  text-decoration: none;
+  font-family: "droulers-italic";
 }
 
 ::selection {
-    background-color: red; 
-    color: #fffbef; 
+  background-color: rgb(123, 9, 9); 
+  color: rgb(245, 249, 252); 
 }
-
-.projets {
-    display: flex;
-    gap: 0px;
-    max-width: 99%;
-    margin-top: 75px 0 auto 0 ; 
-    margin-left: 20px;
-    margin-right : none;
-    scrollbar-width: none; 
-    overflow-x: auto;
-}
-
-
-.projets::-webkit-scrollbar {
-    display: none; /* Masque la barre de défilement sur Chrome, Safari et Edge */
-}
-
-.projet {
-    position: relative; 
-    text-decoration: none;
-    flex: 0 0 auto;
-    transition: transform 0.3s;
-    width: 600px;
-}
-
-.projet:hover .p-page-works {
-    opacity: 1;
-}
-
-.projet img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.projet:hover {
-    transform: scale(0.9); /* Effet d'agrandissement au survol */
-}
-
-.horizontal-scroll {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    gap:0px;
-    margin: 0;
-    scroll-behavior: smooth; 
-}
-
-
-
-
-@media (min-width: 700px) {
-    .projets {
-        grid-template-columns: repeat(2, 1fr); /* Passe à 2 colonnes */
-    }
-}
-
-@media (min-width: 1200px) {
-    .projets {
-        grid-template-columns: repeat(3, 1fr); /* Passe à 2 colonnes */
-    }
-}
-
-
-
-
-
-.page {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: auto;
-    margin: 10px;
-    padding: 1rem;
-    gap : 10px;
-}
-
-.page-large {
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: auto;
-    margin: 10px;
-    padding: 1rem;
-    gap : 10px;
-    text-decoration: none;
-}
-
-
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; 
-    background-color: rgba(0, 0, 0, 0.8); 
-
-}
-
-.modal .close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.modal-content {
-    margin: 50px auto; /* Center the modal on the screen */
-    display: block;
-    width: auto; 
-    max-width: 700px;
-}
-
-.modal-content:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
-}
-
-
-.oval-button-salon-bleu {
-    background-color: blue;
-    color: #fffbef ; 
-    padding: 20px 5px; 
-    margin-top: 100px;
-    margin-bottom: 50px;
-    width: 250px;
-    border: none; 
-    border-radius: 30px; 
-    font-size: 28px; 
-    font-family: "telegraf"; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
-    text-align: center;
-    text-decoration: none;
-    place-self: center;
-}
-
-.oval-button-salon-bleu:hover {
-    background-color: #f94301; /* Couleur plus foncée au survol */
-    text-decoration: none;
-}
-
-.oval-button-nahen {
-    background-color: rgb(124, 107, 0); 
-    color: #fffbef ; 
-    padding: 20px 5px; 
-    margin-top: 100px;
-    margin-bottom: 50px;
-    width: 250px;
-    border: none; 
-    border-radius: 30px; 
-    font-size: 28px; 
-    font-family: "telegraf"; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
-    text-align: center;
-    text-decoration: none;
-    place-self: center;
-}
-
-.oval-button-nahen:hover {
-    
-    background-color:rgb(238, 218, 73);
-    text-decoration: none;
-}
-
-
-#toTopBtn {
-    position: fixed;
-    bottom: 3rem;
-    right: 3rem;
-    cursor: pointer;
-    font-size: 30px;
-    text-align: right;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-    z-index: 99;
-    background: none;
-    border: none;
-} 
-
-#toTopBtn:hover {
-    color: #f94301;
-    text-decoration: none;
-}
-
-
-.scroll-right {
-    position: absolute;
-    right: 25px;
-    top: 60%;
-    color: rgb(0, 0, 0);
-    border: none;
-    background: rgba(255, 255, 255, 0.75);
-    border-radius: 20%;
-    padding: 10px;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 10;
-    transition: background-color 0.3s ease;
-}
-
-
-.scroll-left {
-    position: absolute;
-    left: 25px;
-    top: 60%;
-    color: black;
-    border: none;
-    background: rgba(255, 255, 255, 0.75);
-    border-radius: 20%;
-    padding: 10px;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 10;
-    transition: background-color 0.3s ease;
-}
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-
-footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between; 
-    padding: 20px;
-    gap: 20px;
-    font-family: "telegraf light";
-    position: relative;
-    max-width: 100%;
-}
-
-
-.footer-column p,
-.footer-column a {
-    font-size: 16px;
-    line-height: 1.6;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
-
-.footer-column a:hover {
-    font-style: italic;
-    color: red;
-}
-
-
-
-
-/*
-.projet {
-    display : grid ;
-    grid-template-columns: 1fr 1fr;
-    gap : 10px ;
-    text-decoration: none;
-    color : black ;
-} */
-
-
-
-
-
-
-
-/*
-
-footer {
-    background-color: #f6ffef ;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 10px;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    color: #ff2600;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #2600ff;
-}
-
-*/
